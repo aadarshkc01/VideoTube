@@ -6,11 +6,11 @@ Users can create accounts, upload and watch videos, interact with content throug
 
 ## 🚀 Live Demo
 
-**Frontend:** Coming soon
+**Frontend:** https://video-tube-blue.vercel.app/
 
-**Backend API:** Coming soon
+**Backend API:** https://videotube-qpc8.onrender.com
 
-> The application will be deployed using Vercel for the frontend and Render for the backend.
+> The application is deployed using Vercel for the frontend and Render for the backend.
 
 ---
 
