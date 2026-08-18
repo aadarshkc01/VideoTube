@@ -7,5 +7,5 @@ export const REQUEST_BODY_LIMIT = "16kb";
 export const COOKIE_OPTIONS = {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "strict",
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
 };
