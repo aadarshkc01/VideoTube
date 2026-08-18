@@ -1,0 +1,202 @@
+/* ---------- App shell ---------- */
+.app-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    height: var(--header-h);
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    padding: 0 var(--space-5);
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+    flex-shrink: 0;
+}
+
+.brand-mark {
+    width: 26px;
+    height: 26px;
+    border-radius: var(--radius-sm);
+    background: var(--accent);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.header-search {
+    flex: 1;
+    max-width: 620px;
+    display: flex;
+}
+
+.header-search input {
+    flex: 1;
+    height: 38px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-right: none;
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+    padding: 0 var(--space-4);
+    color: var(--text);
+    transition: border-color var(--transition-fast);
+}
+
+.header-search input:focus {
+    outline: none;
+    border-color: var(--border-strong);
+}
+
+.header-search button {
+    width: 44px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim);
+    transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.header-search button:hover {
+    color: var(--text);
+    background: var(--surface-hover);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* ---------- Rail (left nav) ---------- */
+.rail {
+    width: var(--rail-w);
+    flex-shrink: 0;
+    padding: var(--space-4) var(--space-2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    border-right: 1px solid var(--border);
+    position: sticky;
+    top: var(--header-h);
+    align-self: flex-start;
+    height: calc(100vh - var(--header-h));
+}
+
+.rail-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: var(--space-2) 2px;
+    border-radius: var(--radius-md);
+    color: var(--text-dim);
+    font-size: 10px;
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.rail-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+.rail-link:hover {
+    background: var(--surface);
+    color: var(--text);
+}
+
+.rail-link.active {
+    color: var(--accent-hover);
+}
+
+.rail-divider {
+    height: 1px;
+    background: var(--border);
+    margin: var(--space-3) var(--space-2);
+}
+
+/* ---------- Body layout ---------- */
+.app-body {
+    display: flex;
+    flex: 1;
+}
+
+.main {
+    flex: 1;
+    min-width: 0;
+    padding: var(--space-5);
+}
+
+.main--narrow {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+@media (max-width: 860px) {
+    .rail {
+        display: none;
+    }
+    .header-search {
+        max-width: none;
+    }
+    .main {
+        padding: var(--space-4);
+    }
+}
+
+/* ---------- Filmstrip divider: the page's signature element.
+   A hairline rule punctuated by sprocket holes, standing in for the
+   perforated edge of a film reel. Used between major sections instead
+   of a plain <hr>. ---------- */
+.filmstrip-divider {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: var(--space-7) 0 var(--space-5);
+}
+
+.filmstrip-divider::before,
+.filmstrip-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: repeating-linear-gradient(
+        to right,
+        var(--border) 0,
+        var(--border) 4px,
+        transparent 4px,
+        transparent 10px
+    );
+}
+
+.filmstrip-divider__label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    white-space: nowrap;
+}

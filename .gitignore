@@ -1,0 +1,136 @@
+# ==========================================
+# Dependencies
+# ==========================================
+
+node_modules/
+**/node_modules/
+
+
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
+
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Local environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+
+# ==========================================
+# Build / Production Files
+# ==========================================
+
+dist/
+build/
+**/dist/
+**/build/
+
+
+# ==========================================
+# Vite
+# ==========================================
+
+.vite/
+**/.vite/
+
+
+# ==========================================
+# Logs
+# ==========================================
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+
+# ==========================================
+# Coverage / Testing
+# ==========================================
+
+coverage/
+.nyc_output/
+
+
+# ==========================================
+# Cache
+# ==========================================
+
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+
+# ==========================================
+# Operating System Files
+# ==========================================
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+# ==========================================
+# Editor / IDE
+# ==========================================
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+.idea/
+*.iml
+
+*.swp
+*.swo
+*~
+
+
+# ==========================================
+# Temporary Files
+# ==========================================
+
+tmp/
+temp/
+*.tmp
+*.temp
+
+
+# ==========================================
+# Backend Uploads / Local Files
+# ==========================================
+
+backend/public/temp/
+backend/uploads/
+backend/tmp/
+
+
+# ==========================================
+# Frontend Temporary Files
+# ==========================================
+
+frontend/.vite/
+
+
+# ==========================================
+# Miscellaneous
+# ==========================================
+
+*.pid
+*.seed
+*.pid.lock
